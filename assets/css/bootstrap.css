@@ -3744,7 +3744,7 @@ body {
   padding: 0;
 }
 #first {
-  background: url(/assets/img/main-screen.jpg);
+  background: url(../img/main-screen.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3859,7 +3859,7 @@ body {
   margin-right: 20px;
 }
 #second {
-  background: url(/assets/img/background2.jpg);
+  background: url(../img/background2.jpg);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3926,7 +3926,7 @@ body {
   transform: scale(1.2);
 }
 .main-questions__left {
-  background: url(/assets/img/gradient-light.jpg);
+  background: url(../img/gradient-light.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3934,7 +3934,7 @@ body {
   color: #60451d;
 }
 .main-questions__right {
-  background: url(/assets/img/gradient-dark.jpg);
+  background: url(../img/gradient-dark.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3956,7 +3956,7 @@ body {
   margin-top: 20px;
 }
 #how-to-get {
-  background: url(/assets/img/screen4-bg.jpg);
+  background: url(../img/screen4-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4002,47 +4002,47 @@ body {
   height: 250px;
 }
 .item1 {
-  background: url(/assets/img/ph-7.jpg) center no-repeat;
+  background: url(../img/ph-7.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item2 {
-  background: url(/assets/img/ph-1.jpg) center no-repeat;
+  background: url(../img/ph-1.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item3 {
-  background: url(/assets/img/ph-3.jpg) center no-repeat;
+  background: url(../img/ph-3.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item4 {
-  background: url(/assets/img/ph-4.jpg) center no-repeat;
+  background: url(../img/ph-4.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item5 {
-  background: url(/assets/img/ph-5.jpg) center no-repeat;
+  background: url(../img/ph-5.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item6 {
-  background: url(/assets/img/ph-6.jpg) center no-repeat;
+  background: url(../img/ph-6.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item7 {
-  background: url(/assets/img/ph-2.jpg) center no-repeat;
+  background: url(../img/ph-2.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 .item8 {
-  background: url(/assets/img/ph-8.jpg) center no-repeat;
+  background: url(../img/ph-8.jpg) center no-repeat;
   background-size: cover;
   background-position: 100% 30%;
 }
 #price {
-  background: url(/assets/img/gradient-light.jpg);
+  background: url(../img/gradient-light.jpg);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4070,7 +4070,7 @@ body {
   font-weight: 400;
 }
 #faq {
-  background: url(/assets/img/faq.jpg);
+  background: url(../img/faq.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
