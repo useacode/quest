@@ -3742,6 +3742,7 @@ input[type="button"].btn-block {
 body {
   margin: 0;
   padding: 0;
+  font: 400 1em/1.38 'PT Sans';
 }
 .row {
   margin: 0;
@@ -3754,7 +3755,6 @@ body {
   height: 100vh;
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
   position: relative;
 }
 .header {
@@ -3876,7 +3876,6 @@ body {
   height: 580px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
   padding-top: 40px;
 }
 .welcome {
@@ -3922,7 +3921,6 @@ body {
   height: 300px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
 }
 .main-questions__block img {
   display: table;
@@ -3973,7 +3971,6 @@ body {
   height: 580px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
 }
 .how-to-get__block {
   display: table;
@@ -4005,7 +4002,6 @@ body {
   height: 500px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
 }
 .photo__item {
   width: 25%;
@@ -4058,7 +4054,6 @@ body {
   background-size: cover;
   height: 780px;
   width: 100%;
-  max-width: 1920px;
   padding-top: 1px;
 }
 .price__caption {
@@ -4085,14 +4080,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 790px;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  max-width: 1920px;
   padding-top: 1px;
+  padding: 1px 100px 0 60px;
 }
 .faq__caption {
   display: table;
-  margin: 40px auto 0;
+  margin: 65px auto 20px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -4101,5 +4096,35 @@ body {
   font-family: 'PT Serif';
   font-weight: 400;
   letter-spacing: 2px;
+}
+.faq__item {
+  background: url(../img/ivory-off-white-paper-texture.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 47.6%;
+  min-height: 275px;
+  margin: 30px 0 0 40px;
+  padding: 70px 80px 0;
+  color: #563d19;
+}
+.faq__item .faq__item-caption h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'PT Serif';
+}
+.faq__item p {
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 1.5em;
+}
+#feedbacks {
+  background: url(../img/gradient-dark.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 520px;
+  margin: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=bootstrap.css.map */
