@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Квест</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css">
 </head>
 <body>
     <section id="first">
@@ -141,16 +142,32 @@
     </section>
     <section id="photo">
         <div class="row">
-            <div class="col-xs-3 photo__item item1"></div>
-            <div class="col-xs-3 photo__item item2"></div>
-            <div class="col-xs-3 photo__item item3"></div>
-            <div class="col-xs-3 photo__item item4"></div>
+            <div class="col-xs-3 photo__item item1 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item2 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item3 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item4 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
         </div>
         <div class="row">
-            <div class="col-xs-3 photo__item item5"></div>
-            <div class="col-xs-3 photo__item item6"></div>
-            <div class="col-xs-3 photo__item item7"></div>
-            <div class="col-xs-3 photo__item item8"></div>
+            <div class="col-xs-3 photo__item item5 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item6 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item7 coffee">
+                <div class="effect3"><div class="coffee-overlay"></div><div class="corner-left"></div><div class="corner-right"></div><div class="corner-bottom"></div><div class="coffee-info"><a href="assets/img/ph-1.jpg" class="info pgthumbimg" alt="Couple love" title="Couple love"><span>Couple love</span></a></div></div>
+            </div>
+            <div class="col-xs-3 photo__item item8">
+                
+            </div>
         </div>
     </section>
     <section id="price">
@@ -225,5 +242,29 @@
              </div>
         </div>
     </footer>
+
+    <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/blueimp-gallery.min.js"></script>
+    <script>
+    $('#photo').click(function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = $('a', $(this));
+        blueimp.Gallery(links, options);
+    });
+    </script>
 </body>
 </html>
