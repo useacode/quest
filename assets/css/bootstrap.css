@@ -4356,18 +4356,20 @@ body {
   background-color: #fff;
 }
 .main-text {
-  position: relative;
-  display: table;
-  margin: 0 auto;
-  top: 200px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
   font-family: 'PT Serif';
   color: #fff;
+  margin-top: -75px;
 }
 .main-text h1 {
   font-size: 45px;
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 .main-text h3 {
   font-size: 25px;
@@ -4653,7 +4655,7 @@ body {
 .faq__caption h2 {
   font-size: 25px;
   font-family: 'PT Serif';
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2px;
 }
 .faq__item {
