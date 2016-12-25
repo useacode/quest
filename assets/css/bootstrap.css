@@ -7965,6 +7965,7 @@ footer .footer__right .social a {
   font-weight: 700;
   font-size: 16px;
   color: #60451d;
+  line-height: 1.25;
 }
 .day span {
   font-weight: normal;
@@ -7977,6 +7978,10 @@ footer .footer__right .social a {
   text-align: center;
   display: inline-block;
   padding: 5px 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .time:hover {
   cursor: pointer;
