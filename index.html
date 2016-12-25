@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Квест</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
+    <script src="assets/js/bootstrap.min.js"></script> 
 </head>
 <body>
     <div class="wrapper scrollbar-dynamic">
@@ -16,20 +19,30 @@
                         </div>
                         <div class="col-xs-11">
                             <nav class="top-menu navbar">
-                                <ul class="clearfix list-unstyled">
-                                    <li class="nav-item"><a href="#about"><nob>Об игре</nob></a></li>
-                                    <li class="nav-item"><a href="#photo">Галерея</a></li>
-                                    <li class="nav-item"><a href="#feedbacks">Отзывы</a></li>
-                                    <li class="nav-item"><a href="#price">Стоимость</a></li>
-                                    <li class="nav-item"><a href="#contacts">Контакты</a></li>
-                                </ul>
+                               <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target='.navbar-collapse'>
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="collapse">
+                                    <ul class="clearfix list-unstyled">
+                                        <li class="nav-item"><a href="#about"><nob>Об игре</nob></a></li>
+                                        <li class="nav-item"><a href="#photo">Галерея</a></li>
+                                        <li class="nav-item"><a href="#feedbacks">Отзывы</a></li>
+                                        <li class="nav-item"><a href="#price">Стоимость</a></li>
+                                        <li class="nav-item"><a href="#contacts">Контакты</a></li>
+                                    </ul>
+                                </div>
                             </nav>
                         </div>
                    </div>
                </div>
-               <div class="" style="position: absolute; right: 40px; top: 20px;">
+               <div class="enroll-wrap">
                  <div class="row">
-                     <div class="col-xs-6">
+                     <div class="col-xs-6 number-cell">
                          <div class="number">
                              <a href="tel:+79218484102"><nobr>8 (921) 84-84-102</nobr></a>
                           </div>
@@ -41,23 +54,23 @@
                </div>     
             </div>
             <div class="main-text">
-                <h1>играйте по-новому</h1>
-                <h3>квест в реальности «заточенные заживо»</h3>
+                <h1>играйте <span>по-новому</span></h1>
+                <h3>квест в реальности <span>«заточенные заживо»</span></h3>
             </div>
             <div class="main-bottom">
                 <div class="row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4 address-cell">
                         <div class="address">
                             <p>Загородный пр. 24, пом. 7Н (вход со второго двора слева)</p>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-4 scroll-cell">
                        <div class="scroll">
                            <img src="assets/img/mouse.svg" alt="" />
                            <p>скролльте вниз, чтобы начать приключение</p>
                        </div>       
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-4 bars-cell">
                         <div class="bars">
                             <img src="assets/img/bars.svg" alt="" />
                             <img src="assets/img/share.svg" alt="" />
@@ -69,71 +82,76 @@
         </section>
         <section id="second">
             <div class="welcome" id="about">
-                <div class="welcome__caption"><p>~ добро пожаловать в замок иф</p></div>
+                <div class="welcome__caption"><p>~ добро пожаловать в замок иф ~</p></div>
                 <div class="welcome__text"><p>ПОПАВ В ИГРУ, ВЫ ОКАЖЕТЕСЬ в камере старинного замка из романа «Граф Монте Кристо». Чтобы выбраться на свободу, вам придется проявить наблюдательность, смекалку и умение не унывать в самых сложных ситуациях.</p></div>
             </div>
             <div class="icon-block">
                 <div class="row">
-                    <div class="col-xs-4">
-                        <img src="assets/img/multiple-users-silhouette.svg" alt="">
-                        <p>ОТ ДВУХ ДО ПЯТИ<br> участников</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="left" src="assets/img/multiple-users-silhouette.svg" alt="">
+                        <p class="right">ОТ ДВУХ ДО ПЯТИ<span> участников</span></p>
                     </div>
-                    <div class="col-xs-4">
-                        <img src="assets/img/time-left.svg" alt="">
-                        <p>60 МИНУТ на<br> прохождение</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="right" src="assets/img/time-left.svg" alt="">
+                        <p class="left">60 МИНУТ на<span> прохождение</span></p>
                     </div>
-                    <div class="col-xs-4">
-                        <img src="assets/img/speedometer-needle.svg" alt="">
-                        <p>СРЕДНЯЯ<br>сложность</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="left" src="assets/img/speedometer-needle.svg" alt="">
+                        <p  class="right">СРЕДНЯЯ<span> сложность</span></p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-4">
-                        <img src="assets/img/maze.svg" alt="">
-                        <p>УНИКАЛЬНЫЕ<br>загадки</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="right" src="assets/img/maze.svg" alt="">
+                        <p class="left">УНИКАЛЬНЫЕ<span> загадки</span></p>
                     </div>
-                    <div class="col-xs-4">
-                        <img src="assets/img/castle-front-wall.svg" alt="">
-                        <p>ПРОРАБОТАННАЯ<br>атмосфера</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="left" src="assets/img/castle-front-wall.svg" alt="">
+                        <p class="right">ПРОРАБОТАННАЯ<span> атмосфера</span></p>
                     </div>
-                    <div class="col-xs-4">
-                        <img src="assets/img/fireworks.svg" alt="">
-                        <p>РАЗВЛЕЧЕНИЕ<br>для всех</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="right" src="assets/img/fireworks.svg" alt="">
+                        <p class="left">РАЗВЛЕЧЕНИЕ<span> для всех</span></p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="main-questions">
             <div class="main-questions__block row">
-                <div class="col-xs-6 main-questions__left">
-                    <div class="border border-1"></div>
-                    <div class="border border-2"></div>
-                    <div class="border border-3"></div>
-                    <div class="border border-4"></div>
-                    <img class="brown-circle brown-circle-1" src="assets/img/brown-circle.svg">
-                    <img class="brown-circle brown-circle-2" src="assets/img/brown-circle.svg">
-                    <img class="brown-circle brown-circle-3" src="assets/img/brown-circle.svg">
-                    <img class="brown-circle brown-circle-4" src="assets/img/brown-circle.svg">
+                <div class="col-xs-12 col-sm-6 main-questions__left">
+                    <div class="border border-1 mobile-hide"></div>
+                    <div class="border border-2 mobile-hide"></div>
+                    <div class="border border-3 mobile-hide"></div>
+                    <div class="border border-4 mobile-hide"></div>
+                    <img class="brown-circle brown-circle-1 mobile-hide" src="assets/img/brown-circle.svg">
+                    <img class="brown-circle brown-circle-2 mobile-hide" src="assets/img/brown-circle.svg">
+                    <img class="brown-circle brown-circle-3 mobile-hide" src="assets/img/brown-circle.svg">
+                    <img class="brown-circle brown-circle-4 mobile-hide" src="assets/img/brown-circle.svg">
                     <div class="main-questions__text">
-                        <p class="caption">ЧТО ТАКОЕ<br>«КВЕСТ В РЕАЛЬНОСТИ»?</p>
-                        <p class="description">Краткое описание и правила игры</p>
+                        <p class="caption">ЧТО ТАКОЕ<br>КВЕСТ В РЕАЛЬНОСТИ?</p>
+                        <p class="description mobile-hide">Краткое описание и правила игры</p>
+                        <p class="mobile-show">
+                            «Квест в реальности» или «Квест в закрытой комнате» — это популярная командная игра на логику и сообразительность. Игроки попадают в сложную ситуацию (оказываются запертыми в крепостной темнице) и должны выбраться из неё за 60 минут, решая различные загадки и головоломки. </p>
+                        <p class="mobile-show">Действие игры разворачивается в детально воссозданых интерьерах мрачного французского замка XIX века.</p>
                     </div>
-                    <img class="main-questions__img" src="assets/img/keyhole-brawn.svg" alt="">
+                    <img class="main-questions__img mobile-hide" src="assets/img/keyhole-brawn.svg" alt="">
                 </div>
-                <div class="col-xs-6 main-questions__right">
-                    <div class="border border-5"></div>
-                    <div class="border border-6"></div>
-                    <div class="border border-7"></div>
-                    <div class="border border-8"></div>
-                    <img class="white-circle white-circle-1" src="assets/img/white_circle.svg">
-                    <img class="white-circle white-circle-2" src="assets/img/white_circle.svg">
-                    <img class="white-circle white-circle-3" src="assets/img/white_circle.svg">
-                    <img class="white-circle white-circle-4" src="assets/img/white_circle.svg">    
+                <div class="col-xs-12 col-sm-6 main-questions__right">
+                    <div class="border border-5 mobile-hide"></div>
+                    <div class="border border-6 mobile-hide"></div>
+                    <div class="border border-7 mobile-hide"></div>
+                    <div class="border border-8 mobile-hide"></div>
+                    <img class="white-circle white-circle-1 mobile-hide" src="assets/img/white_circle.svg">
+                    <img class="white-circle white-circle-2 mobile-hide" src="assets/img/white_circle.svg">
+                    <img class="white-circle white-circle-3 mobile-hide" src="assets/img/white_circle.svg">
+                    <img class="white-circle white-circle-4 mobile-hide" src="assets/img/white_circle.svg">    
                     <div class="main-questions__text">
                         <p class="caption">КОМУ ПОНРАВИТСЯ<br>«ЗАТОЧЕННЫЕ ЗАЖИВО»?</p>
-                        <p class="description">Краткое описание и правила игры</p>
+                        <p class="description mobile-hide">Краткое описание и правила игры</p>
+                        <p class="mobile-show">«Заточенные заживо» отлично подойдет как опытным командам, так и тем, кто впервые принимает участие в подобной игре. Квест не требует специальных знаний или подготовки, и будет интересен всем любителям командных игр, вне зависимости от пола и возраста. </p>
+                        <p class="mobile-show">Квест в реальности — интересный способ отпраздновать годовщину или провести день рождения ребенка. Кстати и взрослым именинникам такой праздник запомниться больше, чем посиделки в баре :)</p>
                     </div>
-                    <img class="main-questions__img" src="assets/img/keyhole-white.svg" alt="">
+                    <img class="main-questions__img mobile-hide" src="assets/img/keyhole-white.svg" alt="">
                 </div>
             </div>
         </section>
@@ -141,15 +159,15 @@
             <div class="how-to-get__block">
                <div class="caption"><p>~ КАК ПОПАСТЬ В ИГРУ ~</p></div>
                 <div class="row">
-                    <div class="col-xs-4 how-to-get__item">
+                    <div class="col-xs-12 col-sm-4 how-to-get__item">
                         <img src="assets/img/how-1-256x277.png" alt="">
                         <p>1. Соберитесь с мыслями. <a href="">Расскажите о квесте друзьям</a>, коллегам или семье.</p>
                     </div>
-                    <div class="col-xs-4 how-to-get__item">
+                    <div class="col-xs-12 col-sm-4 how-to-get__item">
                         <img src="assets/img/how-2-256x277.png" alt="">
                         <p>2. Договоритесь, когда вы хотите начать. Выберите удобное время и <a href="">запишитесь.</a></p>
                     </div>
-                    <div class="col-xs-4 how-to-get__item">
+                    <div class="col-xs-12 col-sm-4 how-to-get__item">
                         <img src="assets/img/how-3-256x277.png" alt="">
                         <p>3. Вовремя придите <a href="">по нужному адресу.</a> Возьмите с собой трезвый ум и хорошее настроение. </p>
                     </div>
@@ -261,7 +279,7 @@
         <section id="feedbacks">
             
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d999.7002193660816!2d30.34017693563011!3d59.92549729410986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1481835516749" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe style="pointer-events: none;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d999.7002193660816!2d30.34017693563011!3d59.92549729410986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1481835516749" width="100%" height="450" frameborder="0" style="border:0"></iframe>
         <footer id="contacts">
             <div class="footer__left">
                 <div class="row">
