@@ -7801,7 +7801,7 @@ body {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 780px;
+  padding-bottom: 10px;
   width: 100%;
   padding-top: 1px;
 }
