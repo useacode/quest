@@ -255,6 +255,13 @@ body{
     font-family: 'PT Serif';
     color: #fff;
     
+    @media (width: 768px){
+        border: none;
+        width: 55%;
+        margin: 0 0 0 25px;
+        padding: 0;
+    }
+    
     @media (max-width: 767px){
         border: none;
         width: 100%;
@@ -267,6 +274,13 @@ body{
             text-transform: uppercase;
             font-size: 25px;
             letter-spacing: 2px;        
+        }
+        
+        @media (width: 768px){
+            p{
+                font-size: 23px;
+                letter-spacing: 0;        
+            }
         }
         
         @media (max-width: 767px){
@@ -299,6 +313,10 @@ body{
     width: 50%;
     margin-top: 50px;
     
+    @media (width: 768px){
+        width: 70%;
+    }
+    
     @media (max-width: 767px){
         width: 90%;
         margin: 50px auto;
@@ -329,6 +347,7 @@ body{
         margin-bottom: 40px;
         color: #fff;       
         text-align: center;
+        font-size: 16px;
         
         span{
             display: block;
@@ -421,7 +440,7 @@ body{
         letter-spacing: 2px;        
         
         @media (max-width: 830px){
-            font-size: 23px;
+            font-size: 21px;
             text-align: center;
         }
         @media (max-width: @screen-phone){
@@ -440,18 +459,21 @@ body{
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-	height: 580px;
 	margin: 0 auto; 
     width: 100%; 
+    padding: 1px 0 40px;
     
     @media (max-width: 767px){
         height: 840px;
     }
 }
 .how-to-get__block{
-    display: table;
-    margin: auto;
     color: #60451d;
+    margin: 0 100px;
+    
+    @media (max-width: 1300px){
+            margin: 0;
+        }
     
     .caption{
         text-align: center;
@@ -465,8 +487,8 @@ body{
     }
     
     .how-to-get__item{
-        max-width: 386px;
         margin-top: 40px;
+        text-align: center;
         
         @media (max-width: 767px){
             text-align: center;
@@ -485,8 +507,9 @@ body{
             }
         }
         p{
+            width: 300px;
             font-size: 15px;
-            margin-top: 40px;
+            margin: 40px auto 0;
             
             @media (max-width: 767px){
                 margin-top: 20px;
@@ -561,7 +584,7 @@ body{
 }
 .price__caption{
     display: table;
-    margin: 80px auto 0;
+    margin: 60px auto 0;
     color: #60451d;
     text-transform: uppercase;
     h2{
@@ -576,6 +599,10 @@ body{
         font-size: 15px;   
         font-weight: 400;
     }
+    
+    @media screen and (max-width: 768px){
+        margin: 20px auto 0;
+    }
 }
 #faq{
     background: url(../img/faq.jpg);
@@ -583,11 +610,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; 
-    padding-top: 1px;
     padding: 1px 100px 60px 60px;
 
     .border{
         background-color: rgba(96, 69, 29, 0.5)
+    }
+    
+    @media screen and (max-width: 768px){
+        padding: 1px 0 20px;
     }
 }
 .faq__caption{
@@ -600,6 +630,10 @@ body{
         font-family: 'PT Serif';
         font-weight: 400;
         letter-spacing: 2px;
+    }
+    
+    @media screen and (max-width: 768px){
+        margin: 20px auto;
     }
 }
 .faq__item{
@@ -640,6 +674,10 @@ body{
     width: 100%; 
     padding-top: 1px;
     color: #fff;
+    
+    @media screen and (max-width: 768px){
+        padding-bottom: 30px;
+    }
 }
 .feedbacks__caption{
     display: table;
@@ -652,10 +690,18 @@ body{
         font-weight: 400;
         letter-spacing: 2px;
     }
+    
+    @media screen and (max-width: 768px){
+        margin: 20px auto;
+    }
 }
 .feedbacks__wrap-items{
     width: auto;
     margin: 0 100px;
+    
+    @media screen and (max-width: 768px){
+        margin: 0;
+    }
 }
 .feedbacks__item{
     margin: 0 45px;
@@ -666,6 +712,10 @@ body{
         h3{
             font-size: 18px;
             font-weight: 600;
+            
+            @media screen and (max-width: 768px){
+                font-size: 14px;
+            }
         }
     }
     .feedbacks__item-text{
@@ -674,6 +724,14 @@ body{
         p{
             font-size: 16px;
             text-align: center;
+        }
+        
+        @media screen and (max-width: 768px){
+            margin: 20px 0;
+            
+            p{
+                font-size: 14px;
+            }
         }
     }
     .feedbacks__item-link{
@@ -688,11 +746,10 @@ body{
 }
 
 footer{
-    height: 100px;
     background-color: #000;
-    padding-top: 1px;
+    padding: 1px 0 20px;
     position: relative;
-
+    
     .footer__left{
         
         .logo{
@@ -709,6 +766,12 @@ footer{
         .politics{
             color: #fff;
             font-size: 14px;
+        }
+        
+        @media screen and (max-width: 920px){
+            display: table;
+            margin: auto;
+            text-align: center;
         }
         
     }
@@ -729,6 +792,12 @@ footer{
                 color: #fff;
             }
         }
+        
+        @media screen and (max-width: 920px){
+            display: table;
+            margin: 20px auto 0;
+            position: static;
+        }
     }
 }
 
@@ -743,6 +812,11 @@ footer{
     span, p{
         font-weight: normal;
         margin: 0;
+    }
+    
+    @media screen and (max-width: 768px){
+        font-size: 12px;
+        margin-right: 10px;
     }
 }
 
@@ -772,6 +846,10 @@ footer{
     &:hover{
         cursor: pointer;
     }
+    
+    @media screen and (max-width: 768px){
+        font-size: 12px;
+    }
 }
 
 .row-time-wrap{
@@ -790,17 +868,27 @@ footer{
     }
 
     .border-1, .border-2{
-        height: 600px;
+        height: 750px;
+        top: -160px;
     }
 
     .border-3, .border-4{
         width: 90%;
     }
+    
+    .border-4, .brown-circle-2, .brown-circle-4{
+        top: -130px;
+    }
+    
+    @media screen and (max-width: 768px){
+        padding: 0;
+    }
+    
 }
 
 .col-time-left{
     flex-basis: 85%;
-    padding: 40px 40px 20px 0px;
+    padding: 0 40px 20px 0px;
     margin-left: 30px;
     display: flex;
     flex-direction: column;
@@ -809,17 +897,45 @@ footer{
     &--top{        
         border-bottom: 2px solid rgba(96, 69, 29, 0.5);
     }
+    
+    @media screen and (max-width: 768px){
+        padding: 0;
+    }
 }
 
 .col-time-right{
     flex-basis: 25%;
     flex-grow: 1;
-    padding: 40px 0px 20px 40px;
+    padding: 0 0px 20px 40px;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
     &--top{
         border-bottom: 2px solid rgba(96, 69, 29, 0.5);
+    }
+    
+    .time{
+       background-color: rgb(174, 125, 53); 
+    }
+    
+    @media screen and (max-width: 768px){
+        padding: 0;
+    }
+}
+
+.how_much{
+    font-size: 16px;
+    font-family: 'PT Serif';
+    color: rgb(96, 69, 29);
+    text-align: center;
+    margin: 20px 0 20px;
+    
+    span{
+        font-weight: 600;
+    }
+    
+    @media screen and (max-width: 768px){
+        font-size: 12px;
     }
 }
 
