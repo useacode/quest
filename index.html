@@ -269,12 +269,24 @@
     <script>
 	   $(function(){
         
-        var slider = $(".bxslider").bxSlider({
-        controls: false,
-        maxSlides: 1,
-        auto: false,
-        });
-	});
+            var slider = $(".bxslider").bxSlider({
+                controls: false,
+                maxSlides: 1,
+                auto: false,
+            });
+
+            $(window).on("scroll", function(){
+                $(".navbar-collapse.in").removeClass("in");
+            });
+
+            $("body > *").on("click", function(e){
+                
+                if(!$(e.target).closest(".navbar-collapse")[0]){
+                    $(".navbar-collapse.in").removeClass("in");
+                }
+
+            });
+	   });
     </script>
 </body>
 </html>

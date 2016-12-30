@@ -322,9 +322,9 @@ body{
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 260px;
 	margin: 0 auto; 
-    width: 100%; 
+    width: 100%;
+    padding-bottom: 30px; 
 }
 .photo__item{
     width: 25%;
@@ -533,4 +533,42 @@ footer{
         text-decoration: underline;
         font-size: 14px;
     }
+}
+
+@keyframes to-left{
+    from {
+        left: 100%; 
+    }
+    to {
+        left: 10%; 
+    }
+}
+
+@media screen and (max-width: 767px){ 
+
+    .navbar-collapse.in, .navbar-collapse.collapsing { 
+        overflow-x: hidden; 
+        overflow-y: hidden; 
+        position: fixed; 
+        left: 10%; 
+        width: 90%;
+        top: 60px; 
+        z-index: 100;
+        animation: to-left 0.25s linear; 
+        -webkit-animation: to-left 0.4s linear; 
+    } 
+
+    .navbar-collapse.in ul, .navbar-collapse.collapsing ul{ 
+        background: rgba(96, 69, 29, 0.85);
+        padding: 22px 30px 16px 30px;
+        width: 100%;
+    } 
+
+    .navbar-collapse ul li{
+        font-size: 20px;
+        display: block;
+        padding-bottom: 8px;
+        float: none;
+    } 
+
 }
