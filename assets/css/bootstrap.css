@@ -7646,9 +7646,62 @@ body {
   height: 300px;
   color: #60451d;
   position: relative;
+  padding: 0;
 }
 .main-questions__left .border {
   background-color: rgba(96, 69, 29, 0.5);
+}
+.main-questions__left .main-questions__img:hover + .popup_left {
+  display: block;
+}
+.main-questions__popup {
+  position: absolute;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  padding: 70px;
+  z-index: 300;
+}
+.main-questions__popup .button_close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  opacity: 0.5;
+}
+.main-questions__popup .button_close:hover {
+  opacity: 1;
+}
+.main-questions__popup p {
+  font-size: 16px;
+}
+.popup_left {
+  background: url(../img/ivory-off-white-paper-texture.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+.popup_left .button_close {
+  background: url(../img/cancel-brown.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.popup_right {
+  background: url(../img/gradient-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.popup_right .button_close {
+  background: url(../img/cancel.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-questions__right {
   background: url(../img/gradient-dark.jpg);
@@ -7658,6 +7711,7 @@ body {
   height: 300px;
   color: #fff;
   position: relative;
+  padding: 0;
 }
 .main-questions__right .border {
   background-color: rgba(255, 255, 255, 0.5);
@@ -8309,5 +8363,84 @@ footer .footer__right .social a {
 }
 .sound-toggle-bar:nth-child(5) {
   animation-delay: 0.4s;
+}
+.main_popup {
+  background: url(../img/ivory-off-white-paper-texture.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 50px;
+  padding: 50px 50px 0;
+  color: #60451d;
+  z-index: 300;
+}
+.main_popup .main_popup__caption {
+  display: table;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main_popup .main_popup__caption h2 {
+  font-size: 24px;
+  font-family: 'PT Serif';
+}
+.main_popup .main_popup__caption h3 {
+  font-size: 16px;
+  font-family: 'PT Sans';
+}
+.main_popup .button_close {
+  background: url(../img/cancel-brown.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  opacity: 0.5;
+}
+.main_popup .button_close:hover {
+  opacity: 1;
+}
+.main_popup .border {
+  background-color: rgba(96, 69, 29, 0.5);
+}
+.main_popup input {
+  width: 300px;
+  height: 40px;
+  border: none;
+}
+.main_popup input:focus {
+  border-color: rgba(96, 69, 29, 0.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(96, 69, 29, 0.6);
+}
+.main_popup label {
+  font-size: 16px;
+  font-family: 'PT Serif';
+  font-weight: normal;
+}
+.main_popup .callme_button {
+  background-color: #60451d;
+  width: 60%;
+  height: 40px;
+  margin: 20px auto 60px;
+  padding-top: 7px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+}
+.main_popup .callme_button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.main_popup .border-1,
+.main_popup .border-2 {
+  height: 65%;
 }
 /*# sourceMappingURL=bootstrap.css.map */
