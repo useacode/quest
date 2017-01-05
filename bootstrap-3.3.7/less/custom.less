@@ -185,14 +185,14 @@ body{
         }
     }
     .scroll{
-        display: table;
+        display: block;
         margin: auto;
-        
-        img{
-            display: block;
-            margin: 0 auto 20px;
-            width: 40px;
+        text-align: center;
+
+        span{
+            text-align: center;
         }
+ 
         p{
             color: #fff;
             font-size: 16px;
@@ -203,7 +203,7 @@ body{
     .bars{
         display: table;
         float: right;
-        margin-top: 60px;
+        margin-top: 90px;
         margin-right: 20px;
         
         img{
@@ -1013,4 +1013,88 @@ footer{
         padding-bottom: 8px;
     } 
 
+}
+
+@keyframes mouse-dot{
+    from{
+        color:transparent;
+    }
+    33%{
+        color:#fff;
+    }
+    to{
+        padding-top:20px;
+        color:transparent;
+    }
+}
+
+.mouse:before{
+    display: inline-block;
+    content: '\2022';
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 1;
+    width: 32px;
+    text-align: center;
+    height: 50px;
+    padding: 0px;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 30px;
+    animation: mouse-dot 1.5s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.music{
+    display: inline-block;
+    margin-right: 14px;
+    vertical-align: middle;
+}
+
+@keyframes sound-toggle{
+    0% {
+        transform:scale(1, 0.2)
+    }
+    25%{
+        transform:scale(1, 1)
+    }
+    50%{
+        transform:scale(1, 0.3)
+    }
+    75%{
+        transform:scale(1, 0.6)
+    }
+    100%{
+        transform:scale(1, 0.2)
+    }
+}
+
+.sound-toggle-bar{
+    display: block;
+    float: left;
+    width: 2px;
+    height: 11px;
+    margin-right: 1px;
+    background: rgba(255,255,255,0.6);
+    transform: scale(1, 0.1);
+    transform-origin: bottom;
+}
+
+.sound-toggle-bar{
+    animation: sound-toggle 2s infinite;
+    &:nth-child(2){
+        animation-delay:1.2s
+    }
+    &:nth-child(3){
+        animation-delay:.3s
+    }
+    &:nth-child(4){
+        animation-delay:1.7s
+    }
+    &:nth-child(5){
+        animation-delay:.4s
+    }
 }
