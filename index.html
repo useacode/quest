@@ -49,7 +49,7 @@
                           </div>
                      </div>
                      <div class="col-xs-6">
-                         <div class="btn enroll">Записаться на игру</div> 
+                         <div class="btn enroll" data-popup>Записаться на игру</div> 
                      </div>
                  </div>                
                </div>     
@@ -148,7 +148,7 @@
                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 main-questions__right">
-                   <div class="main-questions__popup popup_right">
+                    <div class="main-questions__popup popup_right">
                         <div class="border border-5 mobile-hide"></div>
                         <div class="border border-6 mobile-hide"></div>
                         <div class="border border-7 mobile-hide"></div>
@@ -159,7 +159,7 @@
                         <div class="button_close"></div>
                         <p>«Заточенные заживо» отлично подойдет как опытным командам, так и тем, кто впервые принимает участие в подобной игре. Квест не требует специальных знаний или подготовки, и будет интересен всем любителям командных игр, вне зависимости от пола и возраста. </p>
                         <p>Квест в реальности — интересный способ отпраздновать годовщину или провести день рождения ребенка. Кстати и взрослым именинникам такой праздник запомниться больше, чем посиделки в баре :)</p>
-                   </div>
+                    </div>
                     <div class="border border-5 mobile-hide"></div>
                     <div class="border border-6 mobile-hide"></div>
                     <div class="border border-7 mobile-hide"></div>
@@ -513,7 +513,7 @@
                               </div>
                          </div>
                          <div class="col-xs-5">
-                             <div class="btn enroll">Записаться на игру</div> 
+                             <div class="btn enroll" data-popup>Записаться на игру</div> 
                          </div>
                          <div class="col-xs-3">
                              <div class="social">
@@ -525,7 +525,7 @@
                 </div>
         </footer>
         <div class="main_popup">
-            <div class="button_close"></div>
+            <div class="button_close" data-popup></div>
             <div class="border border-1 mobile-hide"></div>
             <div class="border border-2 mobile-hide"></div>
             <div class="border border-3 mobile-hide"></div>
@@ -580,22 +580,52 @@
     </script>
     <script src="assets/js/blueimp-gallery.min.js"></script>
     <script>
-    $('#photo').click(function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = $('a', $(this));
-        blueimp.Gallery(links, options);
-    });
-    </script>
-    <script>
+        $('#photo').click(function (event) {
+            event = event || window.event;
+            var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = {index: link, event: event},
+                links = $('a', $(this));
+            blueimp.Gallery(links, options);
+        });
+
         $('a[href^="#"]').on("click", function(e){
             e.preventDefault();
             var o = $($(this).attr("href"));
             //alert(o.offset());
             $(".scrollbar-dynamic").stop().animate({scrollTop:o.offset().top}, '500', 'swing');
         });
+
+        $("[data-popup]").on("click", function(){
+            $(".main_popup").toggle();
+        })
+
+        $(".main-questions__left").on("mouseover", function(e){
+            if(!$(this).hasClass("nohover"))
+                $(this).addClass("hover");
+        })
+
+        $(".main-questions__left .main-questions__popup .button_close").on("click", function(){
+            $(".main-questions__left").removeClass("hover");
+            $(".main-questions__left").addClass("nohover");
+            setTimeout(function(){
+                 $(".main-questions__left").removeClass("nohover");
+            }, 1000);
+        })
+
+
+        $(".main-questions__right").on("mouseover", function(e){
+            if(!$(this).hasClass("nohover"))
+                $(this).addClass("hover");
+        })
+
+        $(".main-questions__right .main-questions__popup .button_close").on("click", function(){
+            $(".main-questions__right").removeClass("hover");
+            $(".main-questions__right").addClass("nohover");
+            setTimeout(function(){
+                 $(".main-questions__right").removeClass("nohover");
+            }, 1000);
+        })
     </script>
 </body>
 </html>
