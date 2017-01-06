@@ -385,7 +385,9 @@ body{
     display: table;
     margin: 30px auto 0;
     width: 30px;
-    
+    cursor: pointer;
+    position: relative;
+
     &:hover{
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
@@ -407,10 +409,11 @@ body{
 
 @keyframes show-img{
     from{
-        transform: scale(0);
+        transform: scale(1);
     }
     to{
-        transform: scale(200.0);
+        transform-origin: 50% 50%;
+        transform: scale(200);
     }
 }
 
@@ -428,16 +431,20 @@ body{
     .border{
         background-color: rgba(96, 69, 29, 0.5);
     }
+
+    .popup_left .border{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
     
     &.hover .popup_left{
         display: block;
-        animation: show 2s ease-out;
-        animation-delay: 0.6s;
+        animation: show 1.4s linear;
+        animation-delay: 0.2s;
         animation-fill-mode: forwards;
     }
 
     &.hover .main-questions__img{
-        animation: show-img 1.4s ease-out;
+        animation: show-img 1.4s linear;
         animation-fill-mode: forwards;
     }
 }
@@ -469,12 +476,12 @@ body{
         font-size: 16px;
     }
 }
-.popup_left{
+.popup_right{
     background: url(../img/ivory-off-white-paper-texture.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    color: #60451d;
     display: none;
     
     .button_close{
@@ -484,12 +491,14 @@ body{
         background-size: cover;
     }
 }
-.popup_right{
+.popup_left{
     background: url(../img/gradient-dark.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    color: #fff;
+    display: none;
+
     .button_close{
         background: url(../img/cancel.svg);
         background-position: center;
@@ -512,15 +521,19 @@ body{
         background-color: rgba(255, 255, 255, 0.5);
     }
 
+    .popup_right .border{
+        background-color: rgba(96, 69, 29, 0.5);
+    }
+
     &.hover .popup_right{
         display: block;
-        animation: show 2s ease-out;
-        animation-delay: 0.6s;
+        animation: show 1.4s linear;
+        animation-delay: 0.2s;
         animation-fill-mode: forwards;
     }
 
     &.hover .main-questions__img{
-        animation: show-img 1.4s ease-out;
+        animation: show-img 1.4s linear;
         animation-fill-mode: forwards;
     }
 }
@@ -541,7 +554,8 @@ body{
     
     .caption{
         font-size: 25px;
-        letter-spacing: 2px;        
+        letter-spacing: 2px;  
+        cursor: pointer;      
         
         @media (max-width: 830px){
             font-size: 21px;
@@ -1203,6 +1217,18 @@ footer{
     }
 }
 
+@keyframes down{
+    from{
+        transform: translateY(-800px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .main_popup{
     background: url(../img/ivory-off-white-paper-texture.jpg);
     background-position: center;
@@ -1217,6 +1243,8 @@ footer{
     padding: 50px 50px 0;
     color: rgb(96, 69, 29);
     z-index: 300;
+
+    animation: down 0.5s ease-out; 
     
     .main_popup__caption{
         display: table;

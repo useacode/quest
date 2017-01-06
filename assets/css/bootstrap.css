@@ -7631,6 +7631,8 @@ body {
   display: table;
   margin: 30px auto 0;
   width: 30px;
+  cursor: pointer;
+  position: relative;
 }
 .main-questions__img:hover {
   -webkit-transform: scale(1.2);
@@ -7650,9 +7652,10 @@ body {
 }
 @keyframes show-img {
   from {
-    transform: scale(0);
+    transform: scale(1);
   }
   to {
+    transform-origin: 50% 50%;
     transform: scale(200);
   }
 }
@@ -7670,14 +7673,17 @@ body {
 .main-questions__left .border {
   background-color: rgba(96, 69, 29, 0.5);
 }
+.main-questions__left .popup_left .border {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .main-questions__left.hover .popup_left {
   display: block;
-  animation: show 2s ease-out;
-  animation-delay: 0.6s;
+  animation: show 1.4s linear;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 .main-questions__left.hover .main-questions__img {
-  animation: show-img 1.4s ease-out;
+  animation: show-img 1.4s linear;
   animation-fill-mode: forwards;
 }
 .main-questions__popup {
@@ -7705,26 +7711,29 @@ body {
 .main-questions__popup p {
   font-size: 16px;
 }
-.popup_left {
+.popup_right {
   background: url(../img/ivory-off-white-paper-texture.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #60451d;
   display: none;
 }
-.popup_left .button_close {
+.popup_right .button_close {
   background: url(../img/cancel-brown.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.popup_right {
+.popup_left {
   background: url(../img/gradient-dark.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #fff;
+  display: none;
 }
-.popup_right .button_close {
+.popup_left .button_close {
   background: url(../img/cancel.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -7744,14 +7753,17 @@ body {
 .main-questions__right .border {
   background-color: rgba(255, 255, 255, 0.5);
 }
+.main-questions__right .popup_right .border {
+  background-color: rgba(96, 69, 29, 0.5);
+}
 .main-questions__right.hover .popup_right {
   display: block;
-  animation: show 2s ease-out;
-  animation-delay: 0.6s;
+  animation: show 1.4s linear;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 .main-questions__right.hover .main-questions__img {
-  animation: show-img 1.4s ease-out;
+  animation: show-img 1.4s linear;
   animation-fill-mode: forwards;
 }
 .main-questions__text {
@@ -7772,6 +7784,7 @@ body {
 .main-questions__text .caption {
   font-size: 25px;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 @media (max-width: 830px) {
   .main-questions__text .caption {
@@ -8402,6 +8415,16 @@ footer .footer__right .social a {
 .sound-toggle-bar:nth-child(5) {
   animation-delay: 0.4s;
 }
+@keyframes down {
+  from {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .main_popup {
   background: url(../img/ivory-off-white-paper-texture.jpg);
   background-position: center;
@@ -8416,6 +8439,7 @@ footer .footer__right .social a {
   padding: 50px 50px 0;
   color: #60451d;
   z-index: 300;
+  animation: down 0.5s ease-out;
 }
 .main_popup .main_popup__caption {
   display: table;

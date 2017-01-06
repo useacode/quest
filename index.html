@@ -135,13 +135,15 @@
                     </div>
                     <img class="main-questions__img mobile-hide" src="assets/img/keyhole-brawn.svg" alt="">
                     <div class="main-questions__popup popup_left">
-                        <div class="border border-1 mobile-hide"></div>
-                        <div class="border border-2 mobile-hide"></div>
-                        <div class="border border-3 mobile-hide"></div>
-                        <div class="border border-4 mobile-hide"></div>
-                        <img class="brown-circle brown-circle-1 mobile-hide" src="assets/img/brown-circle.svg">
-                        <img class="brown-circle brown-circle-3 mobile-hide" src="assets/img/brown-circle.svg">
-                        <img class="brown-circle brown-circle-4 mobile-hide" src="assets/img/brown-circle.svg">
+                        
+                        <div class="border border-5 mobile-hide"></div>
+                        <div class="border border-6 mobile-hide"></div>
+                        <div class="border border-7 mobile-hide"></div>
+                        <div class="border border-8 mobile-hide"></div>
+                        <img class="white-circle white-circle-2 mobile-hide" src="assets/img/white_circle.svg">
+                        <img class="white-circle white-circle-3 mobile-hide" src="assets/img/white_circle.svg">
+                        <img class="white-circle white-circle-4 mobile-hide" src="assets/img/white_circle.svg">  
+                        
                         <div class="button_close"></div>
                        <p>«Квест в реальности» или «Квест в закрытой комнате » — это популярная командная игра на логику и сообразительность. Игроки попадают в сложную ситуацию (оказываются запертыми в крепостной темнице) и должны выбраться из неё за 60 минут, решая различные загадки и головоломки. </p>
                        <p>Действие игры разворачивается в детально воссозданых интерьерах мрачного французского замка XIX века.</p>
@@ -153,9 +155,9 @@
                         <div class="border border-6 mobile-hide"></div>
                         <div class="border border-7 mobile-hide"></div>
                         <div class="border border-8 mobile-hide"></div>
-                        <img class="white-circle white-circle-2 mobile-hide" src="assets/img/white_circle.svg">
-                        <img class="white-circle white-circle-3 mobile-hide" src="assets/img/white_circle.svg">
-                        <img class="white-circle white-circle-4 mobile-hide" src="assets/img/white_circle.svg">  
+                        <img class="brown-circle brown-circle-1 mobile-hide" src="assets/img/brown-circle.svg">
+                        <img class="brown-circle brown-circle-3 mobile-hide" src="assets/img/brown-circle.svg">
+                        <img class="brown-circle brown-circle-4 mobile-hide" src="assets/img/brown-circle.svg">
                         <div class="button_close"></div>
                         <p>«Заточенные заживо» отлично подойдет как опытным командам, так и тем, кто впервые принимает участие в подобной игре. Квест не требует специальных знаний или подготовки, и будет интересен всем любителям командных игр, вне зависимости от пола и возраста. </p>
                         <p>Квест в реальности — интересный способ отпраздновать годовщину или провести день рождения ребенка. Кстати и взрослым именинникам такой праздник запомниться больше, чем посиделки в баре :)</p>
@@ -600,32 +602,27 @@
             $(".main_popup").toggle();
         })
 
-        $(".main-questions__left").on("mouseover", function(e){
-            if(!$(this).hasClass("nohover"))
-                $(this).addClass("hover");
+        $(".main-questions__left .main-questions__img, .main-questions__left .caption").on("click", function(e){
+            $(".main-questions__left").addClass("hover");
         })
 
         $(".main-questions__left .main-questions__popup .button_close").on("click", function(){
             $(".main-questions__left").removeClass("hover");
-            $(".main-questions__left").addClass("nohover");
-            setTimeout(function(){
-                 $(".main-questions__left").removeClass("nohover");
-            }, 1000);
         })
 
-
-        $(".main-questions__right").on("mouseover", function(e){
-            if(!$(this).hasClass("nohover"))
-                $(this).addClass("hover");
+        $(".main-questions__right .main-questions__img, .main-questions__right .caption").on("click", function(e){
+            $(".main-questions__right").addClass("hover");
         })
 
         $(".main-questions__right .main-questions__popup .button_close").on("click", function(){
             $(".main-questions__right").removeClass("hover");
-            $(".main-questions__right").addClass("nohover");
-            setTimeout(function(){
-                 $(".main-questions__right").removeClass("nohover");
-            }, 1000);
         })
+
+        $("body").on("click", function(e){
+            if(!$(e.target).closest(".main_popup, [data-popup]")[0])
+                $(".main_popup").hide();
+        })
+        
     </script>
 </body>
 </html>
