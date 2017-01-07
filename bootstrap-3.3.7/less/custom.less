@@ -383,7 +383,7 @@ body{
 }
 .main-questions__img{
     display: table;
-    margin: 30px auto 0;
+    margin: 0px auto 20px;
     width: 30px;
     cursor: pointer;
     position: relative;
@@ -410,10 +410,10 @@ body{
 @keyframes show-img{
     from{
         transform: scale(1);
-    }
-    to{
         transform-origin: 50% 50%;
-        transform: scale(200);
+    }
+    to{        
+        transform: scale(130);
     }
 }
 
@@ -439,7 +439,7 @@ body{
     &.hover .popup_left{
         display: block;
         animation: show 1.4s linear;
-        animation-delay: 0.2s;
+        animation-delay: 0s;
         animation-fill-mode: forwards;
     }
 
@@ -492,7 +492,7 @@ body{
     }
 }
 .popup_left{
-    background: url(../img/gradient-dark.jpg);
+    background: radial-gradient(lighten(#553b16, 12%) 5%, #553b16 60%);/*url(../img/gradient-dark.jpg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -539,7 +539,7 @@ body{
 }
 .main-questions__text{
     display: table;
-    margin: 80px auto 0;
+    margin: 70px auto 0;
     font-family: 'PT Serif';
     text-align: center;
     
