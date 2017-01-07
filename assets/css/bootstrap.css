@@ -7678,12 +7678,12 @@ body {
 }
 .main-questions__left.hover .popup_left {
   display: block;
-  animation: show 1.4s linear;
+  animation: show 0.6s linear;
   animation-delay: 0s;
   animation-fill-mode: forwards;
 }
 .main-questions__left.hover .main-questions__img {
-  animation: show-img 1.4s linear;
+  animation: show-img 0.6s linear;
   animation-fill-mode: forwards;
 }
 .main-questions__popup {
@@ -7712,7 +7712,8 @@ body {
   font-size: 16px;
 }
 .popup_right {
-  background: url(../img/ivory-off-white-paper-texture.jpg);
+  background: radial-gradient(#efede7 10%, #e3dfd4 60%);
+  /*url(../img/ivory-off-white-paper-texture.jpg);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7746,7 +7747,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-  color: #fff;
+  color: #e3dfd4;
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -7759,12 +7760,11 @@ body {
 }
 .main-questions__right.hover .popup_right {
   display: block;
-  animation: show 1.4s linear;
-  animation-delay: 0.2s;
+  animation: show 0.6s linear;
   animation-fill-mode: forwards;
 }
 .main-questions__right.hover .main-questions__img {
-  animation: show-img 1.4s linear;
+  animation: show-img 0.6s linear;
   animation-fill-mode: forwards;
 }
 .main-questions__text {
