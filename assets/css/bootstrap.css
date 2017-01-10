@@ -7475,7 +7475,7 @@ body {
     display: none;
   }
 }
-#second {
+#about {
   background: url(../img/background2.jpg);
   background-position: right center;
   background-repeat: no-repeat;
@@ -7486,7 +7486,7 @@ body {
   padding-top: 40px;
 }
 @media (max-width: 767px) {
-  #second {
+  #about {
     background-position: 70% 50%;
     background-size: cover;
     height: 610px;
@@ -7728,7 +7728,7 @@ body {
 }
 .popup_left {
   background: radial-gradient(#865d23 5%, #553b16 60%);
-  /*url(../img/gradient-dark.jpg);*/
+  /*url(../img/gradient-dark.png);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7742,7 +7742,7 @@ body {
   background-size: cover;
 }
 .main-questions__right {
-  background: url(../img/gradient-dark.jpg);
+  background: url(../img/gradient-dark.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7830,6 +7830,7 @@ body {
 .how-to-get__block .caption {
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 20px;
   font-size: 25px;
   font-family: 'PT Serif';
 }
@@ -7850,7 +7851,7 @@ body {
   }
 }
 .how-to-get__block .how-to-get__item img {
-  width: 300px;
+  width: 250px;
 }
 @media (max-width: 960px) {
   .how-to-get__block .how-to-get__item img {
@@ -7976,7 +7977,7 @@ body {
 }
 .faq__caption {
   display: table;
-  margin: 65px auto 20px;
+  margin: 50px auto 20px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -8014,7 +8015,7 @@ body {
   line-height: 1.5em;
 }
 #feedbacks {
-  background: url(../img/gradient-dark.jpg);
+  background: url(../img/gradient-dark.png);
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8031,7 +8032,7 @@ body {
 }
 .feedbacks__caption {
   display: table;
-  margin: 50px auto 20px;
+  margin: 40px auto 20px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -8112,6 +8113,7 @@ footer .footer__left .address {
 footer .footer__left .politics {
   color: #fff;
   font-size: 14px;
+  text-decoration: underline;
 }
 @media screen and (max-width: 920px) {
   footer .footer__left {
@@ -8493,7 +8495,7 @@ footer .footer__right .social a {
   width: 60%;
   height: 40px;
   margin: 20px auto 60px;
-  padding-top: 7px;
+  padding-top: 9px;
   color: #fff;
   box-sizing: border-box;
   border-radius: 3px;
