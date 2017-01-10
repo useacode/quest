@@ -75,7 +75,7 @@
                                 <i class="sound-toggle-bar"></i>
                                 <i class="sound-toggle-bar"></i>
                             </span>
-                            <img src="assets/img/share.svg" alt="" />
+                            <a href="javascript://" onclick="ShareToVk()"><img src="assets/img/share.svg" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -626,6 +626,16 @@
                 $(".main_popup").hide();
         })
         
+    </script>
+    <script>
+        function ShareToVk() {  
+            tltl = document.title  
+            width = 550  
+            height = 268  
+            w_top = (window.screen.height - height)/2  
+            w_left = (window.screen.width - width)/2  
+            window.open('http://vk.com/share.php?url='+document.location.href+'&tltl='+tltl+'&cmg=1', 'shareSite','width=550px,height=268px,resizable=yes,scrollbars=yes,left='+w_left+',top='+w_top);
+        }  
     </script>
 </body>
 </html>
