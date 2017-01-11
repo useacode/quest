@@ -7633,12 +7633,14 @@ body {
   width: 30px;
   cursor: pointer;
   position: relative;
+  transition: all 0.2s ease-out;
 }
 .main-questions__img:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  transform: scale(1.4);
+}
+.main-questions__left:hover .main-questions__img,
+.main-questions__right:hover .main-questions__img {
+  transform: scale(1.4);
 }
 @keyframes show {
   from {
@@ -8152,6 +8154,7 @@ footer .footer__right .social a {
   color: #60451d;
   line-height: 1.25;
   margin-right: 40px;
+  min-width: 110px;
 }
 .day span,
 .day p {
@@ -8193,6 +8196,11 @@ footer .footer__right .social a {
   .time {
     font-size: 12px;
   }
+}
+.time.disable {
+  background-color: rgba(136, 125, 108, 0.34);
+  color: #60451d;
+  cursor: default;
 }
 .row-time-wrap {
   display: flex;
@@ -8255,6 +8263,11 @@ footer .footer__right .social a {
 }
 .col-time-right .time {
   background-color: #ae7d35;
+}
+.col-time-right .time.disable {
+  background-color: rgba(136, 125, 108, 0.34);
+  color: #60451d;
+  cursor: default;
 }
 @media screen and (max-width: 768px) {
   .col-time-right {
@@ -8375,6 +8388,7 @@ footer .footer__right .social a {
   display: inline-block;
   margin-right: 14px;
   vertical-align: middle;
+  cursor: pointer;
 }
 @keyframes sound-toggle {
   0% {
@@ -8403,19 +8417,19 @@ footer .footer__right .social a {
   transform: scale(1, 0.1);
   transform-origin: bottom;
 }
-.sound-toggle-bar {
+.music:not(.pause) .sound-toggle-bar {
   animation: sound-toggle 2s infinite;
 }
-.sound-toggle-bar:nth-child(2) {
+.music:not(.pause) .sound-toggle-bar:nth-child(2) {
   animation-delay: 1.2s;
 }
-.sound-toggle-bar:nth-child(3) {
+.music:not(.pause) .sound-toggle-bar:nth-child(3) {
   animation-delay: 0.3s;
 }
-.sound-toggle-bar:nth-child(4) {
+.music:not(.pause) .sound-toggle-bar:nth-child(4) {
   animation-delay: 1.7s;
 }
-.sound-toggle-bar:nth-child(5) {
+.music:not(.pause) .sound-toggle-bar:nth-child(5) {
   animation-delay: 0.4s;
 }
 @keyframes down {

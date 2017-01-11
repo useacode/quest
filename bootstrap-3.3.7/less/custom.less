@@ -387,12 +387,16 @@ body{
     width: 30px;
     cursor: pointer;
     position: relative;
+    transition: all 0.2s ease-out;
 
     &:hover{
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
+        transform: scale(1.4);
+    }
+}
+
+.main-questions__left:hover, .main-questions__right:hover{
+    .main-questions__img{
+        transform: scale(1.4);
     }
 }
 
@@ -927,6 +931,7 @@ footer{
     color: rgb(96, 69, 29);
     line-height: 1.25;
     margin-right: 40px;
+    min-width: 110px;
 
     span, p{
         font-weight: normal;
@@ -968,6 +973,12 @@ footer{
     
     @media screen and (max-width: 768px){
         font-size: 12px;
+    }
+
+    &.disable{
+        background-color: rgba(136, 125, 108, 0.34);
+        color: rgb(96, 69, 29);
+        cursor: default;
     }
 }
 
@@ -1034,7 +1045,12 @@ footer{
     }
     
     .time{
-       background-color: rgb(174, 125, 53); 
+        background-color: rgb(174, 125, 53); 
+        &.disable{
+            background-color: rgba(136, 125, 108, 0.34);
+            color: rgb(96, 69, 29);
+            cursor: default;
+        }   
     }
     
     @media screen and (max-width: 768px){
@@ -1171,6 +1187,7 @@ footer{
     display: inline-block;
     margin-right: 14px;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 @keyframes sound-toggle{
@@ -1202,7 +1219,7 @@ footer{
     transform-origin: bottom;
 }
 
-.sound-toggle-bar{
+.music:not(.pause) .sound-toggle-bar{
     animation: sound-toggle 2s infinite;
     &:nth-child(2){
         animation-delay:1.2s
