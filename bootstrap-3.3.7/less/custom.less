@@ -1340,6 +1340,53 @@ footer{
     }
 }
 
+.success_popup{
+    background: url(../img/ivory-off-white-paper-texture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    //display: none;
+    top: 50%;
+    left: 50%;    
+    margin-top: -192px;
+    margin-left: -300px;
+    padding: 100px 100px;
+    color: rgb(96, 69, 29);
+    z-index: 300;
+    
+    .button_close{
+        background: url(../img/cancel-brown.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 14px;
+        top: 15px;
+        opacity: 0.5;
+        
+        &:hover{
+            opacity: 1;
+        }
+    }
+    
+    .border {
+        background-color: rgba(96, 69, 29, 0.5);
+    }
+    
+    .border-1, .border-2{
+        height: 50%;
+    }
+    
+    p{
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
 #preloader{
     position: fixed;
     left: 0;
