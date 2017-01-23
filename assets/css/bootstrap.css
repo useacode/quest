@@ -7805,6 +7805,10 @@ body {
 .main-questions__text .description {
   font-size: 16px;
   margin-top: 20px;
+  text-decoration: underline;
+}
+.main-questions__text .description:hover {
+  cursor: pointer;
 }
 #how-to-get {
   background: url(../img/screen4-bg.jpg);
@@ -8045,6 +8049,9 @@ body {
   font-weight: 400;
   letter-spacing: 2px;
 }
+.feedbacks__caption h2 span {
+  font-size: 30px;
+}
 @media screen and (max-width: 768px) {
   .feedbacks__caption {
     margin: 20px auto;
@@ -8195,6 +8202,7 @@ footer .footer__right .social a {
   flex-grow: 1;
 }
 .time:hover {
+  background-color: rgba(136, 125, 108, 0.34);
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -8273,6 +8281,9 @@ footer .footer__right .social a {
   background-color: rgba(136, 125, 108, 0.34);
   color: #60451d;
   cursor: default;
+}
+.col-time-right .time:hover {
+  background-color: #c9974d;
 }
 @media screen and (max-width: 768px) {
   .col-time-right {

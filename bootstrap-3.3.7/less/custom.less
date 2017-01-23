@@ -573,6 +573,11 @@ body{
     .description{
         font-size: 16px;
         margin-top: 20px;
+        text-decoration: underline;
+        
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 #how-to-get{ 
@@ -812,6 +817,10 @@ body{
         font-family: 'PT Serif';
         font-weight: 400;
         letter-spacing: 2px;
+        
+        span{
+            font-size: 30px;
+        }
     }
     
     @media screen and (max-width: 768px){
@@ -974,6 +983,7 @@ footer{
     flex-grow: 1;
 
     &:hover{
+        background-color: rgba(136, 125, 108, 0.34);
         cursor: pointer;
     }
     
@@ -1056,7 +1066,10 @@ footer{
             background-color: rgba(136, 125, 108, 0.34);
             color: rgb(96, 69, 29);
             cursor: default;
-        }   
+        } 
+        &:hover{
+            background-color: rgb(201, 151, 77);
+        }
     }
     
     @media screen and (max-width: 768px){

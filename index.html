@@ -195,7 +195,7 @@
                     </div>
                     <div class="col-xs-12 col-md-4 how-to-get__item">
                         <img src="assets/img/how-3-256x277.png" alt="">
-                        <p>3. Вовремя придите <a href="">по нужному адресу.</a> Возьмите с собой трезвый ум и хорошее настроение. </p>
+                        <p>3. Вовремя придите <a href="#contacts">по нужному адресу.</a> Возьмите с собой трезвый ум и хорошее настроение. </p>
                     </div>
                 </div>
             </div>  
@@ -480,28 +480,30 @@
             </div>
         </section>
         <section id="feedbacks">
-            <div class="feedbacks__caption"><h2>ЛЮДИ <3 «MONTE CRISTO»</h2></div>
+            <div class="feedbacks__caption"><h2>ЛЮДИ <span class="glyphicon glyphicon-heart"></span> «MONTE CRISTO»</h2></div>
             <div class="feedbacks__wrap-items">
                 <div class="row-flex">
                     <div class="col-flex feedbacks__item">
                         <div class="feedbacks__item-caption"><h3>ДВЕРЬ ВО ФРАНЦИЮ</h3></div>
                         <div class="feedbacks__item-text"><p>Не часто мы выходим из квеста такими воодушевленными, игра точно стоит того, чтобы её пройти. Кстати тем, кто не читал «Графа», бояться нечего: знание книги не дает преимуществ, но помогает проникнуться духом!</p></div>
-                        <div class="feedbacks__item-link"><a href="">Команда Кирилла Белого</a></div>
+                        <div class="feedbacks__item-link"><a href="https://vk.com/topic-108655138_33148640" target="_blank">Команда Кирилла Белого</a></div>
                     </div>
                     <div class="col-flex feedbacks__item">
                         <div class="feedbacks__item-caption"><h3>НЕРЕАЛЬНО КРУТО</h3></div>
                         <div class="feedbacks__item-text"><p>Ходили на новый квест "Узники замка ИФ" Был в Спб на 3 квестах и могу сказать, что это наверно лучший. Настолько атмосферный, настолько технически красивый - дух захватывает! Спасибо!</p></div>
-                        <div class="feedbacks__item-link"><a href="">Команда Александра Соболева</a></div>
+                        <div class="feedbacks__item-link"><a href="https://vk.com/topic-108655138_33148640" target="_blank">Команда Александра Соболева</a></div>
                     </div>
                     <div class="col-flex feedbacks__item">
                         <div class="feedbacks__item-caption"><h3>ОТЛИЧНО ДЛЯ НОВИЧКОВ</h3></div>
                         <div class="feedbacks__item-text"><p>Незабываемое приключение по мотивам нетленного произведения. Масса увлекательных головоломок и, конечно, незабываемые эмоции, которыми можно поделиться друг с другом после игры, за вкусным чаем с печеньками :)</p></div>
-                        <div class="feedbacks__item-link"><a href="">Команда Анны Софриджиной</a></div>
+                        <div class="feedbacks__item-link"><a href="https://vk.com/topic-108655138_33148640" target="_blank">Команда Анны Софриджиной</a></div>
                     </div>
                 </div>
             </div>
         </section>
-        <iframe style="pointer-events: none;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d999.7002193660816!2d30.34017693563011!3d59.92549729410986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1481835516749" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d999.7002193660816!2d30.34017693563011!3d59.92549729410986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1481835516749" width="100%" height="450" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen></iframe>
+        </div>
         <footer id="contacts">
                 <div class="footer__left">
                         <div class="logo"><img src="assets/img/logo.svg" alt="" /></div>
@@ -616,7 +618,7 @@
             $(".main_popup").toggle();
         })
 
-        $(".main-questions__left .main-questions__img, .main-questions__left .caption").on("click", function(e){
+        $(".main-questions__left .main-questions__img, .main-questions__left .caption, .main-questions__left .description").on("click", function(e){
             $(".main-questions__left").addClass("hover");
         })
 
@@ -624,7 +626,7 @@
             $(".main-questions__left").removeClass("hover");
         })
 
-        $(".main-questions__right .main-questions__img, .main-questions__right .caption").on("click", function(e){
+        $(".main-questions__right .main-questions__img, .main-questions__right .caption, .main-questions__right .description").on("click", function(e){
             $(".main-questions__right").addClass("hover");
         })
 
@@ -647,6 +649,18 @@
             w_left = (window.screen.width - width)/2  
             window.open('http://vk.com/share.php?url='+document.location.href+'&tltl='+tltl+'&cmg=1', 'shareSite','width=550px,height=268px,resizable=yes,scrollbars=yes,left='+w_left+',top='+w_top);
         }  
+    </script>
+    <script>
+        //map scrolling
+         $(document).ready(function() {
+             $('#map').click(function() {
+                 $('#map iframe').css("pointer-events", "auto");
+             });
+
+             $("#map").mouseleave(function() {
+                 $('#map iframe').css("pointer-events", "none");
+             });
+         });
     </script>
 </body>
 </html>
